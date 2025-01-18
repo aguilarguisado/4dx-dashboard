@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"i18n": ["../../packages/i18n"]
+		},
+		"lib": ["esnext", "dom"],
+		"target": "esnext",
+		"esModuleInterop": true,
+		"strict": true,
+		"moduleResolution": "node",
+		"noEmit": true,
+		"skipLibCheck": true,
+		"experimentalDecorators": true,
+		"types": ["vitest/globals"],
+		"resolveJsonModule": true
+	},
+	"include": ["src/**/*", "eslint.config.js", "test-setup.ts", "vitest.config.ts", ".prettierrc.mjs"],
+	"exclude": ["node_modules", "dist", ".turbo"]
+}

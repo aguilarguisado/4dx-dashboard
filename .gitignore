@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+
+# Build outputs
+apps/web/dist
+apps/server/dist
+packages/i18n/dist
+
+# Temporary/Cache files
+.turbo
+stats.html
+*.log
+
+# Firebase
+firebase.json
+.firebaserc
+
+
+# Environment files
+.env
+# Server-specific outputs
+apps/server/html
+apps/server/coverage

@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"jsx": "react-jsx",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"target": "es6",
+		"module": "esnext",
+		"skipLibCheck": true,
+		"types": ["vite/client"],
+		"composite": false,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"inlineSources": false,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"preserveWatchOutput": true,
+		"strict": true,
+		"noEmit": true,
+		"experimentalDecorators": true,
+		"lib": ["esnext", "ES2022", "DOM", "DOM.Iterable", "esnext.intl", "es2017.intl", "es2018.intl"],
+		"resolveJsonModule": true
+	},
+	"include": ["src", "eslint.config.js", "vite.config.ts"],
+	"exclude": [".turbo", "dist", "node_modules"]
+}

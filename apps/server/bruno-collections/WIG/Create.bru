@@ -1,0 +1,21 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{server_url}}/api/wigs
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "From API",
+    "description": "Description",
+    "target": 2,
+    "current": 1,
+    "dueDate": "2024-02-01T18:40:40.145Z"
+  }
+}

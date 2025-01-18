@@ -1,0 +1,15 @@
+body {
+	background-color: #eff3f7;
+	margin: 0;
+}
+
+.max-page-width {
+	width: 100%;
+	max-width: 1728px;
+}
+
+.app-box-container {
+	max-width: 1728px;
+	width: 100%;
+	margin: 8px;
+}

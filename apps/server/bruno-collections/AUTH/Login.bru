@@ -1,0 +1,28 @@
+meta {
+  name: Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=<your-firebase-api-key>
+  body: json
+  auth: none
+}
+
+query {
+  key: <your-firebase-api-key>
+}
+
+body:json {
+  {
+      "returnSecureToken": true,
+      "email": <your-email>,
+      "password": <your-password>,
+      "clientType": "CLIENT_TYPE_WEB"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("token","Token "+res.body.idToken);
+}

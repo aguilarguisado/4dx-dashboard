@@ -1,0 +1,21 @@
+meta {
+  name: CreateLead
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{server_url}}/api/wigs/<wig-id>/leads
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: {{token}}
+}
+
+body:json {
+  {
+    "name":"Test lead"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "tasks": {
+    "debug": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "web#dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "test": {
+      "outputs": []
+    },
+    "type-check": {
+      "outputs": []
+    },
+    "pre-commit": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "lint:fix": {
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": [
+        "type-check",
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "deploy": {
+      "dependsOn": [
+        "build",
+        "test",
+        "lint"
+      ]
+    }
+  }
+}

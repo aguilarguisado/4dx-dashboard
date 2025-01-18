@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npm run test && pnpm -r --workspace-concurrency=1 pre-commit
+pnpm -r --workspace-concurrency=1 pre-commit
+

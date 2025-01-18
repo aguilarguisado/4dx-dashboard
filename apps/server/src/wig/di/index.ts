@@ -1,0 +1,40 @@
+import { WIGControllerImpl } from '../data/controllers/WIGControllerImpl';
+import { WIGRepositoryImpl } from '../data/repositories/WIGRepositoryImpl';
+import { WIGInteractor } from '../domain/interactors/WIGInteractor';
+import { WIGRepository } from '../domain/repositories/WIGRepository';
+import { CreateLagUseCase } from '../domain/usecases/CreateLagUseCase';
+import { CreateLeadUseCase } from '../domain/usecases/CreateLeadUseCase';
+import { CreateScoreboardUseCase } from '../domain/usecases/CreateScoreboardUseCase';
+import { CreateWIGUseCase } from '../domain/usecases/CreateWIGUseCase';
+import { DeleteLagUseCase } from '../domain/usecases/DeleteLagUseCase';
+import { DeleteLeadUseCase } from '../domain/usecases/DeleteLeadUseCase';
+import { DeleteScoreboardUseCase } from '../domain/usecases/DeleteScoreboardUseCase';
+import { DeleteWIGUseCase } from '../domain/usecases/DeleteWIGUseCase';
+import { GetWIGListUseCase } from '../domain/usecases/GetWIGListUseCase';
+import { GetWIGUseCase } from '../domain/usecases/GetWIGUseCase';
+import { UpdateLagUseCase } from '../domain/usecases/UpdateLagUseCase';
+import { UpdateLeadUseCase } from '../domain/usecases/UpdateLeadUseCase';
+import { UpdateScoreboardUseCase } from '../domain/usecases/UpdateScoreboardUseCase';
+import { UpdateWIGUseCase } from '../domain/usecases/UpdateWIGUseCase';
+
+import { ContainerModule } from 'inversify';
+
+export const wigModule = new ContainerModule((bind) => {
+	bind<WIGRepository>(Symbol.for('WIGRepository')).to(WIGRepositoryImpl).inSingletonScope();
+	bind<WIGInteractor>(WIGInteractor).toSelf().inSingletonScope();
+	bind<GetWIGListUseCase>(GetWIGListUseCase).toSelf().inSingletonScope();
+	bind<GetWIGUseCase>(GetWIGUseCase).toSelf().inSingletonScope();
+	bind<CreateWIGUseCase>(CreateWIGUseCase).toSelf().inSingletonScope();
+	bind<UpdateWIGUseCase>(UpdateWIGUseCase).toSelf().inSingletonScope();
+	bind<DeleteWIGUseCase>(DeleteWIGUseCase).toSelf().inSingletonScope();
+	bind<CreateLeadUseCase>(CreateLeadUseCase).toSelf().inSingletonScope();
+	bind<UpdateLeadUseCase>(UpdateLeadUseCase).toSelf().inSingletonScope();
+	bind<DeleteLeadUseCase>(DeleteLeadUseCase).toSelf().inSingletonScope();
+	bind<CreateLagUseCase>(CreateLagUseCase).toSelf().inSingletonScope();
+	bind<UpdateLagUseCase>(UpdateLagUseCase).toSelf().inSingletonScope();
+	bind<DeleteLagUseCase>(DeleteLagUseCase).toSelf().inSingletonScope();
+	bind<CreateScoreboardUseCase>(CreateScoreboardUseCase).toSelf().inSingletonScope();
+	bind<UpdateScoreboardUseCase>(UpdateScoreboardUseCase).toSelf().inSingletonScope();
+	bind<DeleteScoreboardUseCase>(DeleteScoreboardUseCase).toSelf().inSingletonScope();
+	bind<WIGControllerImpl>(WIGControllerImpl).toSelf().inSingletonScope();
+});
